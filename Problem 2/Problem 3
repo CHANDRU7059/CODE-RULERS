@@ -8,8 +8,8 @@ int main() {
 
     int rooms[totalRooms];   
     for (i = 0; i < totalRooms; i++) {
-        rooms[i] = 0;       
-    
+        rooms[i] = 0;   
+    }
 
     printf("\nEnter number of rooms to allocate: ");
     scanf("%d", &allocated);
@@ -18,9 +18,8 @@ int main() {
         printf("\nError: Cannot allocate more rooms than available!\n");
         return 0;
     }
-
     for (i = 0; i < allocated; i++) {
-        rooms[i] = 1;        // 1 means room allocated
+        rooms[i] = 1;        
     }
 
     printf("\nRoom Allocation Successful!\n");
@@ -31,7 +30,7 @@ int main() {
         }
     }
 
-
+    
     printf("\nAvailable Rooms: ");
     for (i = 0; i < totalRooms; i++) {
         if (rooms[i] == 0) {
