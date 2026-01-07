@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{   char pass[];
+    int i;
+    int upper=0,lower=0,digit=0;
+    printf("Enter your password :");
+    scanf("%s",&pass);
+     if(stringlen(pass[i])<8)
+{    printf("Your password requires minimunm eight characters!!");
+}
+for(i=0;i<8;i++)
+{
+if(islower(pass[i]))
+{lower=lower+1;}
+ if(isupper(pass[i]))
+{upper=upper+1;}
+if(isnum(pass[i]))
+{digit=digit+1;}
+}
+if(lower&&upper&&digit!=0)
+{
+    printf("YOUR PASSWoRD IS STRONG");
+}
+else 
+{printf("YOUR PASSWORD IS WEAK");}
+return 0;
+}
