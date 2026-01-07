@@ -24,15 +24,15 @@ int main() {
 
     printf("\n===== Grocery Bill =====\n");
     printf("Item\t\tPrice\tQty\tAmount\n");
-    printf("-----------------------------------\n");
+    printf("--------------------------);
 
     for (i = 0; i < n; i++) {
         printf("%-10s\t%.2f\t%d\t%.2f\n", item[i], price[i], qty[i], price[i] * qty[i]);
     }
 
-    printf("-----------------------------------\n");
+    printf("----------------------");
     printf("Total Bill: %.2f\n", total);
-    printf("===============================\n");
+    printf("=============================");
 
     return 0;
 }
