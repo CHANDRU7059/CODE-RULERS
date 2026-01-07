@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    int i,n,ar,av;
+    printf("Enter the no of total rooms :");
+    scanf("%d",&n);
+    int allocate[n];
+    i=sizeof(allocate[n])/2;
+    allocate[0]=001;
+    allocate[1]=002;
+    allocate[2]=003;
+    allocate[3]=004;
+    printf("\nEnter the no of rooms allocated :");
+    scanf("%d",&ar);
+    av=n-ar;
+    if(av==0)
+    {
+        printf("\nNO available rooms");
+        
+    }else
+    {
+        printf("\nRemaining rooms available:");
+        printf(av);
+
+    }
+return 0;
+
+}
