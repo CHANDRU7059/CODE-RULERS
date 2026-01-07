@@ -1,27 +1,40 @@
-#include<stdio.h>
-int main()
-{   char pass[];
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char pass[100];  
     int i;
-    int upper=0,lower=0,digit=0;
-    printf("Enter your password :");
-    scanf("%s",&pass);
-     if(stringlen(pass[i])<8)
-{    printf("Your password requires minimunm eight characters!!");
-}
-for(i=0;i<8;i++)
-{
-if(islower(pass[i]))
-{lower=lower+1;}
- if(isupper(pass[i]))
-{upper=upper+1;}
-if(isnum(pass[i]))
-{digit=digit+1;}
-}
-if(lower&&upper&&digit!=0)
-{
-    printf("YOUR PASSWoRD IS STRONG");
-}
-else 
-{printf("YOUR PASSWORD IS WEAK");}
-return 0;
+    int upper = 0, lower = 0, digit = 0;
+
+    printf("Enter your password: ");
+    scanf("%99s", pass);   
+
+
+    if (strlen(pass) < 8) {
+        printf("Your password requires minimum eight characters!!\n");
+        return 0;
+    }
+
+
+    for (i = 0; i < strlen(pass); i++) {
+        if (islower(pass[i])) {
+            lower++;
+        }
+        if (isupper(pass[i])) {
+            upper++;
+        }
+        if (isdigit(pass[i])) {
+            digit++;
+        }
+    }
+
+
+    if (lower > 0 && upper > 0 && digit > 0) {
+        printf("YOUR PASSWORD IS STRONG\n");
+    } else {
+        printf("YOUR PASSWORD IS WEAK\n");
+    }
+
+    return 0;
 }
