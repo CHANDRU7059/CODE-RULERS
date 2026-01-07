@@ -1,21 +1,38 @@
-#include<stdio.h>
-#include<string.h>
-int main()
-{
-    int i,n;
-    float total=0;
-    Printf("/n************* IPL GROCERY SHOP **************");
-    printf("/nEnter the no of items :");
-    scanf("%d",&n);
-    printf("Enter the name of the each item :");
-    for(i=0;i<n;i++)
-    {
-        printf("Item %d %s:",i);
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    float price[50], total = 0;
+    int qty[50];
+    char item[50][30]; 
+
+    printf("Enter number of items: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        printf("\nEnter name of item %d: ", i + 1);
+        scanf("%s", item[i]);
+
+        printf("Enter price of %s: ", item[i]);
+        scanf("%f", &price[i]);
+
+        printf("Enter quantity of %s: ", item[i]);
+        scanf("%d", &qty[i]);
+
+        total += price[i] * qty[i];
     }
-    
 
+    printf("\n===== Grocery Bill =====\n");
+    printf("Item\t\tPrice\tQty\tAmount\n");
+    printf("-----------------------------------\n");
 
+    for (i = 0; i < n; i++) {
+        printf("%-10s\t%.2f\t%d\t%.2f\n", item[i], price[i], qty[i], price[i] * qty[i]);
+    }
 
+    printf("-----------------------------------\n");
+    printf("Total Bill: %.2f\n", total);
+    printf("===============================\n");
 
-
+    return 0;
 }
