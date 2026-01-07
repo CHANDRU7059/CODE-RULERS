@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int i,n;
+    float total=0;
+    Printf("/n************* IPL GROCERY SHOP **************");
+    printf("/nEnter the no of items :");
+    scanf("%d",&n);
+    printf("Enter the name of the each item :");
+    for(i=0;i<n;i++)
+    {
+        printf("Item %d %s:",i);
+    }
+    
+
+
+
+
+
+}
